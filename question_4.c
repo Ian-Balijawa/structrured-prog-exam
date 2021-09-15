@@ -1,25 +1,22 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include "string.h"
+#include <string.h>
+
+#define LENGTH 5
 
 void displayMenu();
-int hasUpperCase(char * password);
-int hasLowerCase(char * password);
-int hasNumber(char * password);
-int hasWildCard(char * password);
-int isValidPassword(char * password);
-int hasAcceptableLength(char * password);
-int hasAcceptableLength(char * password);
-void reversePassword(char * password);
+void displayPassword();
+
+
+char password[6];
+char acceptableChars[11] = {'a','b','c','d','e','f','g','h', '#', '*'};
 
 int main(){
 
-    char password[6];
-
     displayMenu();
-
-
-
+    printf("\nEnter a valid Password: ");
+    gets(password);
+    displayPassword();
 
     return 0;
 }
@@ -32,38 +29,12 @@ void displayMenu(){
     printf("\nWild cards # and * are also accepted");
 
 }
-void getPassword(char * password){
-    scanf("%s ", password);
-}
-
-int hasUpperCase(char * password){
-
-    return 1;
-}
-
-int hasLowerCase(char * password){
-    return 1;
-}
-
-int hasNumber(char * password){
-    return 1;
-}
-
-
-int hasWildCard(char * password){
-
-    return 1;
-}
-
-int isValidPassword(char * password){
-
-    return 1 || 0;
-}
-
-int hasAcceptableLength(char * password){
-
-}
-
-void reversePassword(char * password){
+void displayPassword(){
+    printf("Your password is: ");
     
+
+    for (int i = 0; i < LENGTH; i++)
+    {
+        printf("%c",password[i]);
+    }
 }
