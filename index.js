@@ -27,3 +27,14 @@ function hasWildCards() {}
 // }
 
 console.log(charInList(chars));
+
+
+void displayMenu(){
+    printf("\n=================================================================================================");
+    printf("\n=======================This is a password validation program====================================\n");
+    printf("\n The password must be strickly 5 characters long\n");
+    printf("\nAccepatble password characters are alphabetical letters a(A) - h(H)\n");
+    printf("\nWild cards # and * are also accepted\n");
+    printf("\nPassword provided with a Wild card # or * will be displayed to in a reversed form\n");
+
+}
